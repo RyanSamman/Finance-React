@@ -1,3 +1,14 @@
+# **IMPORTANT** Steps to begin developing:
+
+First of all, to install the most recent node_packages:
+
+`npm install`
+
+Go to (Alphavantage)[https://www.alphavantage.co/support/#api-key] and get your own API key for use in the project
+
+Create a file `key.txt`, and paste your API key into the file
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
