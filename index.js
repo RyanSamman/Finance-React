@@ -22,7 +22,7 @@ const mongoose = require('mongoose');
 
 
 console.time("Time taken to load the database:");
-mongoose.connect('mongodb+srv://mixedsignals:6d697865647369676e616c73@mixedsignals-s6wpf.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -34,30 +34,8 @@ db.once('open', function () {
     console.timeEnd("Time taken to load the database:");
 });
 
-
-// Returns the key synchronously
-function getKey() {
-    let keyPath = "key.txt";
-
-    if (!fs.existsSync(keyPath)) {
-        // adding colors to commandline https://nodejs.org/en/knowledge/command-line/how-to-get-colors-on-the-command-line/
-        console.log(chalk.bgRed(`Key file not found! Please create ${path.join(__dirname, keyPath)}`));
-        throw new Error("Key file not found");
-    }
-    let APIkey = fs.readFileSync(path.join(__dirname, keyPath), "utf8");
-    const regex = RegExp('^(.){16}$');
-    // Checks if key is 16 characters long
-    if (regex.test(APIkey)) {
-        return APIkey
-    }
-    else {
-        console.log(chalk.bgRed(`The API key "${APIkey}" is not a valid key`));
-        throw new Error("Invalid API key");
-    }
-}
-
 // API Key
-let AlphaVantageKey = getKey();
+let AlphaVantageKey = process.env.API_KEY;
 
 console.log(chalk.bgBlue.black(`Loaded key: "${AlphaVantageKey}"`));
 
