@@ -7,15 +7,24 @@ First of all, to ensure you are using the the most recent node_packages:
 Then go to [Alphavantage](https://www.alphavantage.co/support/#api-key) and get your own API key for use in the project
 
 
-Create a file `.env`, and 
+Create a file `.env`, and enter this:
 ```
-API_KEY="REPLACE-WITH-API-KEY"
+API_KEY="<API-KEY>"
 MONGO_URI="mongodb+srv://<USERNAME>:<PASSWORD>@mixedsignals-s6wpf.mongodb.net/test?retryWrites=true&w=majority"
 
 ```
-create paste your API key into the file
+Replace `<API-KEY>` with your AlphaVantage API Key, `<USERNAME>` and `<PASSWORD>`
+ with your MongoDB user information.
 
+# Starting the Express Server
 
+```node index.js``` 
+
+Alternatively, if you want the server to reboot every time you make a change, try out [Nodemon](https://nodemon.io/)
+
+```nodemon index.js```
+
+# React/Webpack Server
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
