@@ -18,11 +18,11 @@ Replace `<API-KEY>` with your AlphaVantage API Key, `<USERNAME>` and `<PASSWORD>
 
 # Starting the Express Server
 
-```node index.js``` 
+```npm express``` 
 
-Alternatively, if you want the server to reboot every time you make a change, try out [Nodemon](https://nodemon.io/)
+Alternatively, if you want the server to reboot every time you save, try out [Nodemon](https://nodemon.io/)
 
-```nodemon index.js```
+```nodemon npm express```
 
 # React/Webpack Server
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

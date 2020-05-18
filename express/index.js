@@ -1,14 +1,12 @@
+
 // Throws error if any uncaught exceptions occur
 process.on('unhandledRejection', err => {
     throw err;
 });
 
-// Load correct .env
-require("dotenv").config({ path: '.env' });
-
 // Create OS independent path strings
 const path = require('path');
-// Access the file system for key.txt
+// Access the file system
 const fs = require('fs');
 // Give strings color, to highlight errors etc https://www.npmjs.com/package/chalk
 const chalk = require('chalk');
@@ -21,7 +19,7 @@ const cookieParser = require("cookie-parser")
 
 // MongoDB Agent
 const mongoose = require('mongoose');
-const models = require("./Models");
+const models = require("./models/Models");
 
 // User Model: models.User();
 // Stock Model: models.Stock();
@@ -46,7 +44,7 @@ if (process.env.API_KEY) {
     AlphaVantageKey = process.env.API_KEY;
     console.log(chalk.bgBlue.black(`Loaded key: "${AlphaVantageKey}"`));
 } else {
-    throw Error(chalk.bgRed.black("NO API KEY FOUND! - Go over README.md")); // !! add your key to .env !!
+    throw Error(chalk.bgRed.black("⚠️  NO API KEY FOUND! - GO OVER README.md⚠️  ")); // ⚠️  add your key to .env⚠️
 }
 
 // Initialize AlphaVantage API 
@@ -60,8 +58,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 /* ~~~~~~~~~~~ Express MiddleWare ~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 // Prints to console the requests given to the server
-// TODO
+// TODO: Create Logger to log all requests instead of printing to console
 app.use((req, res, next) => {
     console.log(chalk.bgBlue.black(`Method: ${req.method}; Path: ${req.path} - ${req.ip}`));
     next();
