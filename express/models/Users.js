@@ -16,7 +16,14 @@ const User_S = new Schema({
         required: [true, "Testing"],
         index: true
     },
+    // TODO: Find best cryptographic hash for passwords (MD5)
     password: String,
+    // TODO: Find a way to autogen salt
+    // Appending the salt to the password before hashing ensures that it can't be
+    // looked up on a rainbow table, so even if the database was breached, hackers cannot
+    // decrypt the password
+    // https://en.wikipedia.org/wiki/Rainbow_table
+    salt: String,
     preferences: [NewsPreference_S]
 });
 
