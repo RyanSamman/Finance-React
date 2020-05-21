@@ -1,0 +1,23 @@
+[33m9092e5b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: checkout: moving from tstest to master
+[33mb47c2ed[m HEAD@{1}: commit: Testing
+[33mb3dc6b0[m[33m ([m[1;31mupstream/master[m[33m)[m HEAD@{2}: checkout: moving from master to tstest
+[33m9092e5b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: reset: moving to HEAD
+[33m9092e5b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{4}: commit: Major refactor - WIP
+[33m3b655ea[m HEAD@{5}: commit: Create Mongoose Schemas
+[33me8fc37f[m HEAD@{6}: commit: Changed code to support .env
+[33m1944f72[m HEAD@{7}: commit: Update gitignore and README.md
+[33m6ca7ee0[m HEAD@{8}: pull --progress origin: Fast-forward
+[33m8d1151b[m HEAD@{9}: checkout: moving from Server to master
+[33ma185fe0[m[33m ([m[1;31morigin/Server[m[33m, [m[1;32mServer[m[33m)[m HEAD@{10}: commit: Express APIs & Database connection
+[33md3efaf9[m HEAD@{11}: commit: Update README.md
+[33me6d262d[m HEAD@{12}: checkout: moving from master to Server
+[33m4da94dc[m HEAD@{13}: commit: Update .gitignore
+[33ma76123c[m[33m ([m[1;32mejected[m[33m)[m HEAD@{14}: checkout: moving from Server to master
+[33me6d262d[m HEAD@{15}: commit: AlphaVantage API test
+[33ma76123c[m[33m ([m[1;32mejected[m[33m)[m HEAD@{16}: Branch: renamed refs/heads/Serverr to refs/heads/Server
+[33ma76123c[m[33m ([m[1;32mejected[m[33m)[m HEAD@{18}: checkout: moving from ejected to Serverr
+[33ma76123c[m[33m ([m[1;32mejected[m[33m)[m HEAD@{19}: merge master: Fast-forward
+[33m4b61832[m HEAD@{20}: checkout: moving from master to ejected
+[33ma76123c[m[33m ([m[1;32mejected[m[33m)[m HEAD@{21}: checkout: moving from master to master
+[33ma76123c[m[33m ([m[1;32mejected[m[33m)[m HEAD@{22}: commit: Eject boilerplate
+[33m4b61832[m HEAD@{23}: clone: from https://github.com/greyspurv2/Finance-React.git
