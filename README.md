@@ -1,17 +1,13 @@
 # **IMPORTANT** 
 # Steps to begin developing:
 
-First of all, to install the most recent node_packages:
+First of all, to ensure you are using the the most recent node_packages:
 
 `npm install`
 
-Go to (Alphavantage)[https://www.alphavantage.co/support/#api-key] and get your own API key for use in the project
+Then go to [Alphavantage](https://www.alphavantage.co/support/#api-key) and get your own API key for use in the project
 
-Create a file `key.txt`, and paste your API key into the file
 
-<<<<<<< Updated upstream
-
-=======
 Edit the file `.env.example`:
 ```
 API_KEY="<API-KEY>"
@@ -22,6 +18,13 @@ Replace `<API-KEY>` with your AlphaVantage API Key, `<USERNAME>` and `<PASSWORD>
  with your MongoDB user information.
  
 Then, rename `.env.example` to `.env`
+```
+API_KEY="<API-KEY>"
+MONGO_URI="mongodb+srv://<USERNAME>:<PASSWORD>@mixedsignals-s6wpf.mongodb.net/test?retryWrites=true&w=majority"
+
+```
+Replace `<API-KEY>` with your AlphaVantage API Key, `<USERNAME>` and `<PASSWORD>`
+ with your MongoDB user information.
 
 # Starting the Express Server
 
@@ -32,7 +35,6 @@ Alternatively, if you want the server to reboot every time you save, try out [No
 ```nodemon npm express```
 
 # React/Webpack Server
->>>>>>> Stashed changes
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
