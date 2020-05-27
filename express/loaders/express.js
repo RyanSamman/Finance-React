@@ -8,7 +8,7 @@ const chalk = require('chalk');
 // https://www.ibm.com/garage/method/practices/manage/health-check-apis/
 // Standard is to return the current status and (optional) JSON body
 // TODO: move to promise checking status of database?
-app.get("/status", (req, res) => res.status(200).end());
+app.get("/status", (req, res) => res.status(200).json({ "status": "200" }));
 app.head("/status", (req, res) => res.status(200).end());
 
 /* ~~~~~~~~~~~~~~~~~~~~ Express Middleware ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

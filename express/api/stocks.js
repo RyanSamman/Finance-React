@@ -54,6 +54,19 @@ router.get('/', async (req, res) => {
     })
 });
 
+router.get('/alpha/:symbol', async (req, res) => {
+    console.log(req.path);
+    try {
+        let data = await alpha.data.daily(req.params.symbol);
+        res.json(alpha.util.polish(data));
+    } catch (err) {
+        res.status(403);
+        console.log(err);
+        res.json(err);
+    }
+
+});
+
 
 
 module.exports = router;
